@@ -88,7 +88,7 @@ fun main() {
     schedule.addSchedule(Days.MONDAY, ScheduleEntity("Chemistry", LocalTime.of(11, 15), LocalTime.of(11, 55)))
 
      //Так добавляется расписание с использованием DSL
-    schedule {
+    schedule({
 
         monday {
             "10:30".."11:10" schedule "Biology"
@@ -124,7 +124,7 @@ fun main() {
             "09:00".."09:40" schedule "Art"
             "10:30".."11:10" schedule "Mathematics"
         }
-    }
+    })
 
     println(schedule.toString())
 }
